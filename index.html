@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Yash Parekh" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections — Yash Parekh</title>
+  <meta name="description" content="Personal reflections, experiences, and long-form writings by Yash Parekh. Shared with care, written slowly." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #111111 0%, #000000 60%);
+      color: #e5e5e5;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, #333, transparent);
+      transform: translateX(-50%);
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    p {
+      max-width: 520px;
+      margin: 0 auto 26px;
+      color: #a3a3a3;
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: inline-block;
+      border: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover {
+      background: #e5e5e5;
+      color: #000000;
+    }
+    section {
+      max-width: 820px;
+      margin: auto;
+      padding: 90px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    /* Verses: single-column poetic layout */
+    #verses .grid {
+      display: block;
+      max-width: 520px;
+      margin: 40px auto 0;
+    }
+    #verses .card {
+      border: none;
+      background: none;
+      padding: 0 0 36px 0;
+      margin-bottom: 36px;
+    }
+    #verses .card p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #e5e5e5;
+    }
+    #verses .card::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #333;
+      margin: 28px auto 0;
+    }
+    .card {
+      border: 1px solid #1f1f1f;
+      padding: 26px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #0a0a0a, #000000);
+      transition: transform 0.4s ease, border 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #333333;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px 50px;
+      font-size: 0.75rem;
+      color: #737373;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Fade-in animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>Reflections</h1>
+      <p>Experiences, learnings, and thoughts — shared with care.</p>
+      <p style="font-style: italic; color:#b5b5b5; max-width:600px; margin:0 auto;">
+      Sometimes growth looks like silence — not because there is nothing to say,
+      but because you’re finally listening.
+    </p>
+    </div>
+  </header>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences" class="fade">
+    <h2>Experiences & Learnings</h2>
+    <p style="font-size:0.9rem; color:#9a9a9a; max-width:640px; margin:0 auto 18px;">
+      Some things I learned the hard way.
+    </p>
+        <div class="grid">
+      <div class="card">
+        <h3>Emotional Clarity</h3>
+        <p>
+          Strong emotions aren’t a weakness. Confusion about them is.
+          Clarity arrives slowly, through patience.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Boundaries</h3>
+        <p>
+          Saying yes to everything slowly disconnects you from yourself.
+          Boundaries protect attention and energy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LONGER WRITINGS -->
+  <section id="writings" class="fade">
+    <h2>Longer Writings</h2>
+    <p style="max-width:600px; margin:0 auto 30px;">
+      When a thought needs more space than a few lines, it lives here.
+      These are longer reflections, written slowly.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>On Attachment & Letting Go</h3>
+        <p>
+          A deeper reflection on emotional attachment, identity, and the quiet work of detachment.
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">March 2025</p>
+      </div>
+      <div class="card">
+        <h3>Discipline During Low Phases</h3>
+        <p>
+          Why discipline matters most when motivation disappears.
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">February 2025</p>
+      </div>
+      <div class="card">
+        <h3>Learning to Sit With Discomfort</h3>
+        <p>
+          Growth, silence, and the ability to stay present when things feel unresolved.
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">January 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORT WRITINGS / SHAYARI -->
+  <section id="verses" class="fade">
+    <h2>Verses</h2>
+    <p style="max-width:600px; margin:0 auto 30px;">
+      Short pieces — shayaris, quotes, and poems.
+      Meant to be felt more than explained.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <p style="font-style: italic;">
+          चंद गज की शहरियत किस काम की,<br/>
+          उड़ना आता है तो छत किस काम की।
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">— Shayari</p>
+      </div>
+      <div class="card">
+        <p style="font-style: italic;">
+          Sometimes the bravest thing you can do<br/>
+          is stay when walking away feels easier.
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">— Reflection</p>
+      </div>
+      <div class="card">
+        <p style="font-style: italic;">
+          Silence is not emptiness.<br/>
+          It is space, waiting to be understood.
+        </p>
+        <p style="font-size:0.75rem; color:#737373; margin-top:10px;">— Poem</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="fade">
+    <h2>About</h2>
+    <p>
+      This is Yash.
+      I value clarity over noise and discipline over impulse.
+    </p>
+    <p>
+      At this point in my life, I am learning from experience.
+      Working on discipline, clarity, and balance.
+      Trying to become a little steadier each day.
+    </p>
+    <p>
+      My focus is on meaningful work, steady growth,
+      and becoming reliable in the long run.
+    </p>
+
+    <p style="font-size:0.8rem; color:#737373; max-width:600px; margin:40px auto 0;">
+      Disclaimer: Everything shared on this page reflects personal experiences and reflections.
+      It is not advice, instruction, or guidance. Take what resonates, and leave the rest.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+    <p>For relevant conversations and opportunities.</p>
+    <div class="links">
+      <a href="mailto:yashparekh370@gmail.com" class="btn">Email</a>
+      <a href="https://www.linkedin.com/in/yashparekh2001/" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Yash Parekh · Reflections
+  </footer>
+
+</body>
+</html>
