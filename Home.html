@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Yash Parekh" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections — Yash Parekh</title>
+  <meta name="description" content="Personal reflections and learnings by Yash Parekh. Written slowly." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #111111 0%, #000000 60%);
+      color: #e5e5e5;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    nav a {
+      color: #a3a3a3;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    nav a.active {
+      color: #e5e5e5;
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      padding-top: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, #333, transparent);
+      transform: translateX(-50%);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    p {
+      max-width: 520px;
+      margin: 0 auto 26px;
+      color: #a3a3a3;
+      font-size: 0.95rem;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .btn {
+      border: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      padding: 10px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e5e5e5;
+      color: #000;
+    }
+
+    section {
+      max-width: 820px;
+      margin: auto;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .card {
+      border: 1px solid #1f1f1f;
+      padding: 26px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #0a0a0a, #000000);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 50px;
+      font-size: 0.75rem;
+      color: #737373;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="writings.html">Longer Writings</a>
+    <a href="verses-experiences.html">Verses & Experiences</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>Reflections</h1>
+      <p>Experiences, learnings, and thoughts — shared with care.</p>
+      <p style="font-style: italic; color:#b5b5b5;">
+        Sometimes growth looks like silence — not because there is nothing to say,
+        but because you’re finally listening.
+      </p>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section>
+    <h2>What This Space Holds</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Reflection</h3>
+        <p>Thoughts shaped by experience, not urgency.</p>
+      </div>
+      <div class="card">
+        <h3>Discipline</h3>
+        <p>Learning to stay consistent during low phases.</p>
+      </div>
+      <div class="card">
+        <h3>Clarity</h3>
+        <p>Reducing noise to understand what actually matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Yash Parekh · Reflections
+  </footer>
+
+</body>
+</html>
